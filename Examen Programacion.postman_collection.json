@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "7eeefe83-074d-4a47-a6f8-cdf6427663de",
+		"name": "Examen Programacion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10664187"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/signup/v1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Enrique Acosta",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "miPassword123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/signup/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"signup",
+						"v1"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:8000/signup/v1 \\\n     -d \"username=Enrique Acosta\" \\\n     -d \"password=miPassword123\"\n"
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.1.10/restconf/data/ietf-interfaces:interfaces/interface=Loopback11",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "cisco123!",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.1.10/restconf/data/ietf-interfaces:interfaces/interface=Loopback11",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"10"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces",
+						"interface=Loopback11"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE \\\n  https://192.168.1.10/restconf/data/ietf-interfaces:interfaces/interface=Loopback11 \\\n  -u cisco:cisco123! \\\n  --insecure\n"
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.1.10/restconf/data/ietf-interfaces:interfaces",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "cisco123!",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ietf-interfaces:interface\": {\n      \"name\": \"Loopback22\",\n      \"description\": \"Loopback 22 apagada\",\n      \"type\": \"iana-if-type:softwareLoopback\",\n      \"enabled\": false,\n      \"ietf-ip:ipv4\": {\n        \"address\": [\n          {\n            \"ip\": \"22.22.22.22\",\n            \"netmask\": \"255.255.255.255\"\n          }\n        ]\n      }\n    }\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.10/restconf/data/ietf-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"10"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \\\n  https://192.168.1.10/restconf/data/ietf-interfaces:interfaces \\\n  -H \"Content-Type: application/yang-data+json\" \\\n  -u cisco:cisco123! \\\n  --insecure \\\n  -d '{\n    \"ietf-interfaces:interface\": {\n      \"name\": \"Loopback22\",\n      \"description\": \"Loopback 22 apagada\",\n      \"type\": \"iana-if-type:softwareLoopback\",\n      \"enabled\": false,\n      \"ietf-ip:ipv4\": {\n        \"address\": [\n          {\n            \"ip\": \"22.22.22.22\",\n            \"netmask\": \"255.255.255.255\"\n          }\n        ]\n      }\n    }\n  }'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.1.10/restconf/data/ietf-interfaces:interfaces",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "cisco123!",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json"
+					}
+				],
+				"url": {
+					"raw": "https://192.168.1.10/restconf/data/ietf-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"10"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-interfaces:interfaces"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \\\n  https://192.168.1.10/restconf/data/ietf-interfaces:interfaces \\\n  -H \"Accept: application/yang-data+json\" \\\n  -u cisco:cisco123! \\\n  --insecure\n"
+			},
+			"response": []
+		}
+	]
+}
