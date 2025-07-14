@@ -178,6 +178,148 @@
 				"description": "Generated from cURL: curl -X GET \\\n  https://192.168.1.10/restconf/data/ietf-interfaces:interfaces \\\n  -H \"Accept: application/yang-data+json\" \\\n  -u cisco:cisco123! \\\n  --insecure\n"
 			},
 			"response": []
+		},
+		{
+			"name": "https://10.10.20.90/j_security_check",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "j_username",
+							"value": "enrikefb",
+							"type": "text"
+						},
+						{
+							"key": "j_password",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://10.10.20.90/j_security_check",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"90"
+					],
+					"path": [
+						"j_security_check"
+					]
+				},
+				"description": "Generated from cURL: curl -k -c cookie.txt -X POST \"https://10.10.20.90/j_security_check\" \\\n  -d \"j_username=enrikefb&j_password=\"\n"
+			},
+			"response": []
+		},
+		{
+			"name": "https://10.10.20.90/dataservice/client/token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "cookie.txt"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.20.90/dataservice/client/token",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"90"
+					],
+					"path": [
+						"dataservice",
+						"client",
+						"token"
+					]
+				},
+				"description": "Generated from cURL: curl -k -b cookie.txt \\\n  -X GET \"https://10.10.20.90/dataservice/client/token\"\n"
+			},
+			"response": []
+		},
+		{
+			"name": "https://10.10.20.90:443/dataservice/device/monitor",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "D7FA6FD2354C8349FAFC5B0F292EA6A90F1B483134D914EF219770654E53630061906C59551AB4A91D5DB8D930D1A0E617B7"
+					},
+					{
+						"key": "Cookie",
+						"value": "cookie.txt"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.20.90:443/dataservice/device/monitor",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"90"
+					],
+					"port": "443",
+					"path": [
+						"dataservice",
+						"device",
+						"monitor"
+					]
+				},
+				"description": "Generated from cURL: curl -k -X GET \"https://10.10.20.90:443/dataservice/device/monitor\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"X-XSRF-TOKEN: D7FA6FD2354C8349FAFC5B0F292EA6A90F1B483134D914EF219770654E53630061906C59551AB4A91D5DB8D930D1A0E617B7\" \\\n  -b cookie.txt\n"
+			},
+			"response": []
+		},
+		{
+			"name": "https://10.10.20.90:443/dataservice/statistics/interface",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "D7FA6FD2354C8349FAFC5B0F292EA6A90F1B483134D914EF219770654E53630061906C59551AB4A91D5DB8D930D1A0E617B7"
+					},
+					{
+						"key": "Cookie",
+						"value": "cookie.txt"
+					}
+				],
+				"url": {
+					"raw": "https://10.10.20.90:443/dataservice/statistics/interface",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"90"
+					],
+					"port": "443",
+					"path": [
+						"dataservice",
+						"statistics",
+						"interface"
+					]
+				},
+				"description": "Generated from cURL: curl -k -X GET \"https://10.10.20.90:443/dataservice/statistics/interface\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"X-XSRF-TOKEN: D7FA6FD2354C8349FAFC5B0F292EA6A90F1B483134D914EF219770654E53630061906C59551AB4A91D5DB8D930D1A0E617B7\" \\\n  -b cookie.txt\n"
+			},
+			"response": []
 		}
 	]
 }
